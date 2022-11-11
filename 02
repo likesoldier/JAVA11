@@ -1,0 +1,28 @@
+abstract class Math{
+  protected int ans;
+  public void show() {
+	  System.out.println("ans=" + ans);
+  }
+  public abstract void add(int a ,int b);
+  public abstract void sub(int a ,int b);
+  public abstract void mul(int a ,int b);
+  public abstract void div(int a ,int b);
+}
+class Compute extends Math{
+	protected int a,b;
+	public Compute(int a,int b) {
+	}
+	public void show(){    
+      System.out.println("add=" + (a + b));
+      System.out.println("sub=" + (a - b));
+      System.out.println("mul=" + (a * b));
+      System.out.println("div=" + (a / b));
+   }
+}
+public class hw11_2{
+	public static void main(String args[]) {
+		Compute cmp = new Compute(3,5);
+		cmp.mul(3,5);
+		cmp.show();
+	}
+}
